@@ -13,27 +13,47 @@ html{
     height: 46.5px;
     background-color: #000;
 }
-
-#nav li{
+#nav>li{
     display: inline-block;
+}
+#nav li{
+    position: relative;
+    /* display: inline-block; */
+    list-style-type: none;
+}
+#nav>li>a{
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav .subnav a{
+    color: #000;
 }
 #nav li a{
     padding: 0 24px;
     line-height: 46.5px;
-    color: #fff;
-    text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
 }
 #nav .subnav{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 3);
     display: none;
 }
-#nav li:hover a{
+#nav li:hover .subnav{
+    display: block;
+}
+#nav>li:hover>a{
     color: #000;
-    background-color: #ccc;
+    background-color: #333;
+}
+#nav .subnav li:hover{
+    color: #000;
+    background-color: #333;
 }
 #slider{
-
+    height: 500px;
+    background-color: #a35d5d;
 }
 #content{
 

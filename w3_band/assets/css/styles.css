@@ -29,6 +29,7 @@ html{
     background-color: #000;
 }
 #nav li{
+    position: relative;
     display: inline-block;
 }
 #nav li a{
@@ -45,7 +46,8 @@ html{
 }
 /* di chuột đến li con của #nav, thì các con của li sẽ được hover */
 #nav .subnav{
-    display: none;
+    position: absolute;
+    /* display: none; */
 }
 
 #slider{
