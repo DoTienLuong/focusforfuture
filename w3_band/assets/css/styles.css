@@ -1,0 +1,59 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*
+Nguyên tắc làm việc: 
+1. Làm từ ngoài vào trong
+2. Làm từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+/* 
+Nguyên tắc thiết kế container
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (Kiểu chữ, hình tròn, vuông,...)
+*/
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+
+}
+#header{
+    height: 46.5px;
+    background-color: #000;
+}
+#nav li{
+    display: inline-block;
+}
+#nav li a{
+    padding: 0 24px;
+    line-height: 46.5px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+#nav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+/* di chuột đến li con của #nav, thì các con của li sẽ được hover */
+#nav .subnav{
+    display: none;
+}
+
+#slider{
+
+}
+#content{
+
+}
+#footer{
+
+}
