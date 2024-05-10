@@ -28,43 +28,44 @@ html{
     height: 46.5px;
     background-color: #000;
 }
-#nav > li{
-    display: block;
-}
-#nav li{
+#nav>li{
     position: relative;
-    /* display: inline-block; */
-}
-#nav > li > a{
-    color: #fff;
-}
-#nav li a{
-    padding: 0 24px;
-    line-height: 46.5px;
-    text-decoration: none;
-    text-transform: uppercase;
     display: inline-block;
-}
-/* Cách 2 */
-
-#nav > li:hover > a,
-#nav .subnav li:hover a{
-    color: #000;
-    background-color: #ccc;
-}
-/* di chuột đến li con của #nav, thì các con của li sẽ được hover */
+}   
 #nav .subnav{
     position: absolute;
+    min-width: 160px;
     background-color: #fff;
-    /* display: none; */
+    list-style-type: none;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-/* Cách 1 */
-#nav .subnav li:hover {
+#nav>li>a{
+    padding: 0 24px;
+    line-height: 46.5px;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+#nav li a{
+    text-decoration: none;
+    display: block;
+}
+.subnav li a{
+    padding: 8px 16px;
+    line-height: 22.5px;
     color: #000;
+}
+#nav>li:hover>a{
     background-color: #ccc;
+    color: #333;
 }
-#nav .subnav a{
-    color: #000;
+#nav .subnav li:hover>a{
+    background-color: #ccc;
+    color: #333;
+}
+#nav li:hover .subnav{
+    display: block;
 }
 #slider{
     min-height: 500px;

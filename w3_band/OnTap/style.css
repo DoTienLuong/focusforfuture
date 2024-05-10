@@ -14,46 +14,43 @@ html{
     background-color: #000;
 }
 #nav>li{
-    display: inline-block;
-}
-#nav li{
     position: relative;
-    /* display: inline-block; */
-    list-style-type: none;
-}
-#nav>li>a{
-    color: #fff;
-    text-transform: uppercase;
-}
-#nav .subnav a{
-    color: #000;
-}
-#nav li a{
-    padding: 0 24px;
-    line-height: 46.5px;
-    text-decoration: none;
     display: inline-block;
 }
+
 #nav .subnav{
     position: absolute;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+    min-width: 160px;
     display: none;
+    list-style-type: none;
 }
-#nav li:hover .subnav{
+#nav > li > a{
+    padding: 0 24px;
+    line-height: 46.5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a{
     display: block;
+    text-decoration: none;
 }
-#nav>li:hover>a{
+.subnav li a{
+    line-height: 22.5px;
+    padding: 8px 16px;
     color: #000;
-    background-color: #333;
-}
-#nav .subnav li:hover{
-    color: #000;
-    background-color: #333;
 }
 #slider{
     height: 500px;
     background-color: #a35d5d;
+}
+#nav>li:hover>a,
+#nav .subnav li:hover a{
+    background-color: #ccc;
+    color: #000;
+}
+#nav li:hover .subnav{
+    display: block;
 }
 #content{
 
