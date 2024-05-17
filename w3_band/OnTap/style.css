@@ -17,41 +17,39 @@ html{
     position: relative;
     display: inline-block;
 }
-
 #nav .subnav{
     position: absolute;
     background-color: #fff;
-    min-width: 160px;
-    display: none;
+    display: none;    
     list-style-type: none;
 }
-#nav > li > a{
+#nav>li>a{
     padding: 0 24px;
-    line-height: 46.5px;
-    color: #fff;
-    text-transform: uppercase;
+    color: #fff ;
 }
 #nav li a{
     display: block;
+    line-height: 46.5px;
     text-decoration: none;
+    text-transform: uppercase;
 }
-.subnav li a{
-    line-height: 22.5px;
-    padding: 8px 16px;
-    color: #000;
-}
-#slider{
-    height: 500px;
-    background-color: #a35d5d;
+#nav .subnav li a{
+    color: #333;
+    padding: 0 24px;
 }
 #nav>li:hover>a,
 #nav .subnav li:hover a{
     background-color: #ccc;
-    color: #000;
+    color: #333;
 }
 #nav li:hover .subnav{
     display: block;
 }
+#slider{
+    min-height: 500px;
+    background-color: #333;
+}
+
 #content{
 
 }
