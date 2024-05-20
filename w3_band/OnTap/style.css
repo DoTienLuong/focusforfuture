@@ -21,16 +21,18 @@ html{
 #nav>li>a{
     color: #fff;
     line-height: 46.5px;
+    text-transform: uppercase;
+    padding: 0 24px;
 }
 #nav li a{
     display: block;
-    padding: 0 24px;
     text-decoration: none;
-    text-transform: uppercase;
     list-style-type: none;
 }
 .subnav li a{
-    line-height: 40px;
+    line-height: 38px;
+    padding: 0 12px;
+    color: #000;
 }
 
 #nav>li:hover>a{
@@ -47,6 +49,7 @@ html{
     background-color: #fff;
     list-style-type: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    min-width: 160px;
 }
 #nav li:hover .subnav{
     display: block;
@@ -55,7 +58,7 @@ html{
 
 #slider{
     min-height: 500px;
-    background-color: #333;
+    /* background-color: #333;   */
 }
 #content{
 
