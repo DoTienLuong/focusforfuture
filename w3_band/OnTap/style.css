@@ -13,6 +13,9 @@ html{
     height: 46.5px;
     background-color: #000;
 }
+#nav{
+    display: inline-block;
+}
 #nav>li{
     position: relative;
     display: inline-block;
@@ -54,8 +57,24 @@ html{
 #nav li:hover .subnav{
     display: block;
 }
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
 
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
 
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
+}
 #slider{
     min-height: 500px;
     /* background-color: #333;   */
