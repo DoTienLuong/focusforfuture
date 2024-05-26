@@ -1,0 +1,3 @@
+Git reset: Quay trở lại code ban đầu mà và xoá luôn tất cả code đằng sau.
+Lệnh: git reset --hard (tên git muốn backup)
+
