@@ -80,6 +80,7 @@ html{
     font-size: 20px;
     line-height: 46.5px;
 }
+
 #slider{
     position: relative;
     margin-top: 46.5px;
@@ -98,7 +99,7 @@ html{
     /* Cach 2 
     left: 0;
     right: 0; */
-    /* Cach 3 */
+    Cach 3 
     width: 100%;
     text-align: center;
 }
