@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.clear{
+    clear: both;
+}
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -112,10 +115,49 @@ html{
     margin-top: 25px;
 
 }
-
-
 #content{
 
+}
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+#content .section-sub-heading{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+}
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+}
+#content .member-list{
+    padding-top: 48px;
+}
+#content .member-item{
+    float: left;
+    text-align: center;
+    width: calc(100%/3);
+}
+#content .member-name{
+    font-size: 15px;
+}
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
 }
 #footer{
 

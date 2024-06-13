@@ -1,0 +1,10 @@
+Quy tắc làm việc với css:
+- Từ ngoài vào trong
+- Từ trên xuống dưới
+- Từ tổng quan đến chi tiết
+
+Quy tắc thiết kế container:
+1. Set vị trí
+2. Set kích thước
+3. Set màu sắc
+4. Kiểu dáng (Kiểu chữ, hình dạng,..)

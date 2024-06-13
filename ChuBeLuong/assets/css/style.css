@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+
+/* Header */
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46.5px;
+    background-color: #000;
+    height: 46.5px;
+    z-index: 1;
+}
+#nav{
+    display: inline-block;
+}
+#nav>li{
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+}
+#nav>li>a{
+    display: block;
+    padding: 0 24px;
+    line-height: 46.5px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.subnav li a{
+    display: block;
+    padding: 0 12px;    
+    line-height: 38px;
+    color: #000;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+#nav>li:hover>a,
+#nav .subnav li:hover a{
+    background-color: #ccc;
+    color: #333;
+}
+#nav .subnav{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    list-style-type: none;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
+}
+
+/* Slider */
+#slider{
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    background: url('../img/Combo3.jpg') top center / cover no-repeat;
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+    color: #000;
+    text-align: center;
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 30px;
+}
+#slider .text-description{
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/* Content */
+#content{
+
+}
+
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+#content .section-sub-heading{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 25px;
+    font-style: italic;
+    opacity: 0.8;
+}
+#content .about-text{
+    margin-top: 25px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+#content .school-list{
+    padding-top: 48px;
+}
+#content .school-item{
+    float: left;
+    text-align: center;
+    width: calc(100%/3);
+}
+#content .school-name{
+    font-size: 20px;
+}
+#content .school-img{
+    margin-top: 15px;
+    width: 250px;
+    border-radius: 4px;
+}
+#footer{
+
+}
