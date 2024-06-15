@@ -6,6 +6,10 @@
 .clear{
     clear: both;
 }
+
+.text-white{
+    color: #fff;
+}
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -88,7 +92,7 @@ html{
     position: relative;
     margin-top: 46.5px;
     padding-top: 50%;
-    background: url('/w3_band/assets/img/slider1.jpg') top center / cover no-repeat;
+    background: url('/w3_band/assets/img/slider/slider1.jpg') top center / cover no-repeat;
 
 }
 
@@ -159,6 +163,92 @@ html{
     width: 154px;
     border-radius: 4px;
 }
+
+
+/* Tour - Section */
+.tour-section{
+    background-color: #000;
+}
+
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+.ticket-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.ticket-list .sold-out{
+    padding: 4px 5px;
+    background-color: #F44337;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 16px;
+}
+.ticket-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: -3px;
+}
+
+/* Place */
+.place-list{
+    margin: 32px -8px 0;
+    padding-bottom: 48px;
+}
+.place-item{
+    padding: 0 8px;
+    width: calc(100%/3);
+    float: left;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+.place-heading{
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+.place-time{
+    margin: 15px 0;
+    color: #757575;
+}
+.place-desc{
+    margin: 15px 0;
+    line-height: 1.4;
+}
+.place-buy-btn{
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 0 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+.place-buy-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
 #footer{
 
 }
