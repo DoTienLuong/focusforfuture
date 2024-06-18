@@ -42,9 +42,28 @@
 .mt-16{
     margin-top: 16px !important;
 }
+.pull-right{
+    float: right !important;
+}
+.btn{
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 0 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
 /* Main */
 html{
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth; /* Làm mượt cuộn */
 }
 #main{
 
@@ -157,7 +176,7 @@ html{
 }
 #content .content-section{
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 128px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -236,7 +255,6 @@ html{
 /* Place */
 .place-list{
     margin-top: 32px;
-    margin-bottom: 48px;
 }
 .place-item{
     /* padding: 0 8px; */
@@ -268,18 +286,6 @@ html{
 .place-desc{
     margin: 15px 0;
     line-height: 1.4;
-}
-.place-buy-btn{
-    display: inline-block;
-    padding: 8px 16px;
-    margin: 0 0 16px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-}
-.place-buy-btn:hover{
-    background-color: #ccc;
-    color: #000;
 }
 
 .modal{
@@ -397,11 +403,40 @@ html{
     padding: 10px 19px;
     float: right;
 }
-#footer{
-
+/* Map */
+.map-section img{
+    width: 100%;
 }
-
-
+/* end map */
+/* footer */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list {
+    font-size: 24px;
+}
+#footer .social-list a{
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+#footer .copyright{
+    font-size: 15px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.8);
+}
+#footer .copyright:hover,
+#footer .copyright a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
+/* end footer */
 @keyframes modalFadeIn {
     from {
         opacity: 0;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ôn tập</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/icon/Lam-dep-code.ico">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
 </head>
@@ -13,9 +14,9 @@
             <!-- Begin nav -->
             <ul id="nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Band</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="#">
                     More
                     <i class="nav-arrow-down ti-angle-down"></i>
@@ -44,7 +45,8 @@
         </div>
 
         <div id="content">
-            <div class="content-section">
+            <!-- begin band -->
+            <div id="band" class="content-section">
                 <h2 class="section-heading">The Band</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">
@@ -78,8 +80,10 @@
                     <div class="clear"></div> <!--clear: Bao phủ gom lại vào 1 vùng -->
                 </div>
             </div>
-            <!-- Tour section -->
-            <div class="tour-section">
+            <!-- End band -->
+
+            <!-- Begin Tour section -->
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">Tour Date</h2>
                     <p class="section-sub-heading text-white">Remember to book your ticket!</p>
@@ -97,7 +101,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third">
@@ -106,7 +110,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-third">
@@ -115,15 +119,17 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="place-buy-btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
                      </div>
                 </div>
-
             </div>
-            <div class="content-section" style="margin-bottom: 500px;">
+            <!-- End Tour -->
+
+            <!-- Begin contact -->
+            <div id="contact" class="content-section">
                 <div class="contact-section">
                     <h2 class="section-heading">Contact</h2>
                     <p class="section-sub-heading">Remember to book your ticket!</p>
@@ -152,19 +158,33 @@
                                     <input type="text" name="" id="" required="" placeholder="Message" class="form-control">
                                 </div>
                             </div>
-                            <input class="form-submit-btn mt-16" type="submit" value="Send">
+                            <input class="btn mt-16 pull-right" type="submit" value="Send">
                         </form>
                     </div>
-
                 </div>
             </div>
+            <!-- End Contact Section -->
 
-            <!-- Contact Section -->
+            <!-- Begin Map -->
+            <div class="map-section">
+                <img src="../assets/img/place/map.jpg" alt="Map">
+            </div>
+            <!-- End Map -->
         </div>
 
+        <!-- footer -->
         <div id="footer">
-
+            <div class="social-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="#">w3.css</a></p>
         </div>
+        <!-- End footer -->
     </div>
     <div class="modal js-modal">
         <div class="modal-container js-modal-container">
