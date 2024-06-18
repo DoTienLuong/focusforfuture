@@ -256,9 +256,12 @@ html{
     right: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.4);
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
+}
+.modal.open {
+    display: flex;
 }
 .modal-container {
     position: relative;
@@ -266,6 +269,7 @@ html{
     width: 900px;
     max-width: calc(100%-32px);
     min-height: 200px;
+    animation: modalFadeIn ease .8s;
 }
 .modal-header {
     background-color: #009688;
@@ -330,3 +334,16 @@ html{
 #footer{
 
 }
+
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Làm hiệu ứng cho modal, hiệu ứng chạy từ trên xuống với độ mờ từ 0  -> 1 */
