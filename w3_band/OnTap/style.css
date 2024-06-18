@@ -3,13 +3,30 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Common */
 .clear{
     clear: both;
 }
 
 .text-white{
-    color: #fff;
+    color: #fff !important;
 }
+.text-center{
+    text-align: center !important;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col {
+    float: left;
+    padding: 0 8px;
+}
+.col-third{
+    width: calc(100%/3);
+
+}
+/* Main */
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -151,9 +168,9 @@ html{
     padding-top: 48px;
 }
 #content .member-item{
-    float: left;
-    text-align: center;
-    width: calc(100%/3);
+    /* float: left; */
+    /* text-align: center; */
+    /* width: calc(100%/3); */
 }
 #content .member-name{
     font-size: 15px;
@@ -202,13 +219,13 @@ html{
 
 /* Place */
 .place-list{
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
+    margin-top: 32px;
+    margin-bottom: 48px;
 }
 .place-item{
-    padding: 0 8px;
-    width: calc(100%/3);
-    float: left;
+    /* padding: 0 8px; */
+    /* width: calc(100%/3); */
+    /* float: left; */
 }
 .place-img{
     width: 100%;
