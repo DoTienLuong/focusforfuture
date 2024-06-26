@@ -1,0 +1,5 @@
+Reponsive là gì?
+- Repinsive là kỹ thuật giúp website hiển thị tương thích với nhiều kích thước màn hình khác nhau (Mobile, Tablet, PC, ...)
+- Tối ưu trải nghiệm người dùng:   
+    + Hiển thị rõ ràng các thành phần (hình ảnh, cỡ chữ, nút bấm, ...)
+    + Ẩn / hiện các thành phần phù hợp theo kích thước màn hình

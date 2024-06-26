@@ -1,0 +1,1 @@
+Breakpoint là điểm nút giao thay đổi giao diện khi kích thước thay đổi.

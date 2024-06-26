@@ -76,6 +76,7 @@ html{
     height: 46.5px;
     background-color: #000; 
     z-index: 1;
+    overflow: hidden;
 }
 #nav{
     display: inline-block;
@@ -129,11 +130,16 @@ html{
     background-color: #f44336;
     cursor: pointer;
 }
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 21px;
 }
 
+#header .menu-icon,
 #header .search-icon{
     color: #fff;
     font-size: 20px;
@@ -175,6 +181,8 @@ html{
 
 }
 #content .content-section{
+    max-width: 100%;
+
     width: 800px;
     padding: 64px 0 128px;
     margin-left: auto;
