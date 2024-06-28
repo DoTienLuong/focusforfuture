@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border-box là tất cả cái con nằm trong cái cha */
 }
 /* Common */
 .clear{
@@ -66,17 +67,20 @@ html{
     scroll-behavior: smooth; /* Làm mượt cuộn */
 }
 #main{
-
+    /* Xoá tất cả những gì hiện lồi ra bên ngoài main */
+    /* overflow: hidden; */
 }
 #header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 46.5px;
+    height: 46px;
     background-color: #000; 
     z-index: 1;
-    overflow: hidden;
+
+    /* Thuộc tính ngăn hover xuất hiện tràn ra thẻ bên ngoài */
+    /* overflow: hidden; */
 }
 #nav{
     display: inline-block;
@@ -88,7 +92,7 @@ html{
 }
 #nav>li>a{
     color: #fff;
-    line-height: 46.5px;
+    line-height: 46px;
     text-transform: uppercase;
     padding: 0 24px;
 }
@@ -133,6 +137,13 @@ html{
 #header .mobile-menu-btn:hover{
     background-color: #ccc;
 }
+/* hiển thị menu theo đúng bên phải */
+#header .mobile-menu-btn{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 #header .mobile-menu-btn,
 #header .search-btn{
     float: right;
@@ -143,12 +154,12 @@ html{
 #header .search-icon{
     color: #fff;
     font-size: 20px;
-    line-height: 46.5px;
+    line-height: 46px;
 }
 
 #slider{
     position: relative;
-    margin-top: 46.5px;
+    margin-top: 46px;
     padding-top: 50%;
     background: url('/w3_band/assets/img/slider/slider1.jpg') top center / cover no-repeat;
 
@@ -181,12 +192,15 @@ html{
 
 }
 #content .content-section{
-    max-width: 100%;
-
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 128px;
     margin-left: auto;
     margin-right: auto;
+
+    /* Thêm padding cho ipad */
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .section-heading{
     font-weight: 500;
@@ -208,7 +222,7 @@ html{
     line-height: 1.5;
 }
 #content .member-list{
-    padding-top: 48px;
+    padding-top: 32px;
 }
 #content .member-item{
     /* float: left; */
