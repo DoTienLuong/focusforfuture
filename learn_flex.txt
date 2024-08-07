@@ -1,26 +1,53 @@
 CSS Flexbox?
 
+flex container{
+    cross axis{ // chiều dọc
+        - cross start
+        - cross end
+    } 
+    main axis{  // chiều ngang
+        - main start
+        - main end
+    }
+    flex item{
+        main size (nằm ngang)
+        cross size (nằm dọc)
+    }
+}
+
 display: flex (Hiển thị các container theo dạng flex - chiều ngang)
 display: flex | inline-flex
 
+flex-direction: chọn kiểu flex (ngang hay dọc)
 flex-direction: row (Trục main axis nằm ngang - Tất cả các thành phần con nằm ngang)
-flex-direction: row | column
+flex-direction: row | column | row-reverse | column-reverse
 
-flex-wrap: wrap (xuống hàng cho các container khi bị tràn kích thước).
+flex-wrap: tuỳ chọn xuống dòng khi tràn container.
+flex-wrap: wrap (xuống hàng cho các container khi bị tràn kích thước). (mặc định là nowrap).
 flex-wrap: wrap | nowrap | wrap-reverse (wrap-reverse: đảo ngược chiều xuống dòng của container.)
 
 flex-basis: <length>
 
-justify-content: flex-start | flex-end | center | space-between | space-around
-flext-start | end | center: đưa hết container về bên trái | phải | center.
-space-between: đưa các container cách đều 1 khoảng giữa
-space-around: giữ khoảng cách đều nhau cho các container.
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly (main)
+flext-start | end | center: đưa hết container về bên trái | phải | giữa.
+space-between: đưa các container cách đều 1 khoảng giữa, (các container dính ra ngoài).
+space-around: giữ khoảng cách margin đều nhau cho các container.
+space-evenly: khoảng cách giữa các container = nhau. 
 
-justify-self: flex-start | flex-end | center
+justify-self: flex-start | flex-end | center (main)
 
-align-content: flex-start | flex-end | center
+align-items: định dạng vị trí cho các container theo chiều cross axis.
+align-items: flex-start | flex-end | flex-center | flex-baseline | flex-stretch
+flex-start: đưa tất cả container dính lên top.
+flex-end: đưa tất cả container dính xuống bot.
+flex-center: đưa tất cả container căn về giữa container cha.
+flex-baseline: đưa tất cả container căn giữa container có chiều cao cao nhất dính lên top.
+flex-stretch: đưa tất cả container tất cả container đề full size.
 
-align-self: flex-start | flex-and | center
+
+align-content: flex-start | flex-end | center (cross)
+
+align-self: flex-start | flex-and | center (cross)
 
 flex-grouw: <numner>
 
@@ -30,5 +57,5 @@ flex: <flex-grow> | <flex-shirk> | <flex-basis>
 
 flex-flow: <flex-direction> | <flex-wrap>
 
-order: <number>
+order: <number> (chọn vị trí của container trong row.) ()
 
