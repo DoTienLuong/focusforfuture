@@ -1,0 +1,34 @@
+CSS Flexbox?
+
+display: flex (Hiển thị các container theo dạng flex - chiều ngang)
+display: flex | inline-flex
+
+flex-direction: row (Trục main axis nằm ngang - Tất cả các thành phần con nằm ngang)
+flex-direction: row | column
+
+flex-wrap: wrap (xuống hàng cho các container khi bị tràn kích thước).
+flex-wrap: wrap | nowrap | wrap-reverse (wrap-reverse: đảo ngược chiều xuống dòng của container.)
+
+flex-basis: <length>
+
+justify-content: flex-start | flex-end | center | space-between | space-around
+flext-start | end | center: đưa hết container về bên trái | phải | center.
+space-between: đưa các container cách đều 1 khoảng giữa
+space-around: giữ khoảng cách đều nhau cho các container.
+
+justify-self: flex-start | flex-end | center
+
+align-content: flex-start | flex-end | center
+
+align-self: flex-start | flex-and | center
+
+flex-grouw: <numner>
+
+flex-shrink: <number>
+
+flex: <flex-grow> | <flex-shirk> | <flex-basis>
+
+flex-flow: <flex-direction> | <flex-wrap>
+
+order: <number>
+
