@@ -30,3 +30,20 @@ function writeLog2(message, message2){
     }
 }
 writeLog2('Log1', 'Log2');
+
+
+// từ khóa return trong hàm.
+function cong(a, b){
+    return a + b;
+}
+
+var result = cong(2, 8);
+console.log(result)
+
+// about function.
+/**
+ * About Function
+ * 1. Khi function tạo ra bị lặp, khi hàm được gọi thì chỉ có hàm tạo sau cùng được thực thi.
+ * 2. Khi định nghĩa biến trong hàm thì phạm vi biến chỉ thực thi được trong hàm.
+ * 3. Hàm trong hàm: Cũng như tham số, cũng như biến, hàm tạo trong hàm chỉ chạy được trong hàm bao bọc.
+ */
