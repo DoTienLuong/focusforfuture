@@ -47,3 +47,11 @@ console.log(result)
  * 2. Khi định nghĩa biến trong hàm thì phạm vi biến chỉ thực thi được trong hàm.
  * 3. Hàm trong hàm: Cũng như tham số, cũng như biến, hàm tạo trong hàm chỉ chạy được trong hàm bao bọc.
  */
+
+/**
+ * Các loại function.
+ * 1. Declaration function. Định nghĩa bắt đầu là function và phải có tên của function. Declaration function có thể gọi trước khi định nghĩa.
+ * 2. Expression function.  Định nghĩa bắt đầu với một biến, được gán = 1 function. Có thể đặt tên function hoặc không.
+ * 3. Arrow function.
+ */
+
