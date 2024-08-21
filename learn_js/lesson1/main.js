@@ -1,0 +1,1 @@
+alert('Hi, today i will learn javascript basic')

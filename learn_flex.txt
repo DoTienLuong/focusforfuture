@@ -40,14 +40,21 @@ align-items: định dạng vị trí cho các container theo chiều cross axis
 align-items: flex-start | flex-end | flex-center | flex-baseline | flex-stretch
 flex-start: đưa tất cả container dính lên top.
 flex-end: đưa tất cả container dính xuống bot.
-flex-center: đưa tất cả container căn về giữa container cha.
-flex-baseline: đưa tất cả container căn giữa container có chiều cao cao nhất dính lên top.
-flex-stretch: đưa tất cả container tất cả container đề full size.
+center: đưa tất cả container căn về giữa container cha.
+baseline: đưa tất cả container căn giữa container có chiều cao cao nhất dính lên top.
+stretch: đưa tất cả container tất cả container đề full size.
 
+align-self: dành cho 1 đối tượng cụ thể (các thuộc tính tương tự align-items)
+align-self: flex-auto | flex-start | flex-and | center | baseline | stretch (cross)
+flex-auto: tự động căn chính giữa;
+flex-start: đưa duy nhất container đó lên trên cùng.
+flex-end: đưa duy nhất container đó xuống dưới.
+center: đưa duy nhất container đó về giữa.
+baseline: đưa duy nhất container đó lên trên cùng.
+stretch: kéo dài container tới hết container cha.
 
 align-content: flex-start | flex-end | center (cross)
 
-align-self: flex-start | flex-and | center (cross)
 
 flex-grouw: <numner>
 
