@@ -54,4 +54,3 @@ console.log(result)
  * 2. Expression function.  Định nghĩa bắt đầu với một biến, được gán = 1 function. Có thể đặt tên function hoặc không.
  * 3. Arrow function.
  */
-

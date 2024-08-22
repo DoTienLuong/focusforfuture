@@ -98,3 +98,4 @@ var result = a < b && a < 0;
  * Toán tử || (or) 
  * Cái nào khác false thì lấy luôn.
  */
+
