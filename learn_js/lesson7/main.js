@@ -77,13 +77,13 @@ console.log(languages3.push('Dark', 'Java'));
 console.log(languages3.push('Dark', 'Java'));
 console.log(languages3);
 
-//5. shift: Xoá sản phẩm đầu tiên:
+//5. shift: Xoá phần tử đầu tiên:
 console.log(languages3.shift());
 console.log(languages3);
 console.log(languages3.shift());
 console.log(languages3)
 
-//6. unshift: Thêm phần tử vào mảng.
+//6. unshift: Thêm phần tử vào đầu mảng.
 languages3.unshift('Đỗ Tiến Lượng', 'Đang học');
 console.log(languages3);
 
@@ -133,9 +133,26 @@ var love = any.concat(eny); // Tạo array để gán 2 array.
 console.log(love); 
 
 any.push('love');   // Thêm phần tử vào cuối mảng any.
+eny.push('rất nhiều.');
 console.log(any);
+// eny.pop();          // xóa phần tử cuối (2004);
+any.splice(1,1);    // xóa phần tử vị trí thứ 1, xóa 1 phần tử.  
+eny.splice(1,1);    // xóa phần tử vị trí thứ 1, xóa 1 phần tử.  
+console.log(any);
+console.log(eny);
+
+any.unshift('hôm nay', 'Anh');  // thêm 2 phần tử vào mảng any;
+eny.unshift('hôm nay', 'em');   // thêm 2 phần tử vào mảng eny;
+console.log(any);
+console.log(eny);
+
+any.splice(0,1);    
+eny.splice(0,1);
+console.log(any);
+console.log(eny);
 
 
-
+love = any.concat(eny);
+console.log(love.join(' '));
 
 
