@@ -23,3 +23,4 @@ console.log(!isNaN('asdasd'));  // Những hàm có kiểu chuổi thì khi gán
 console.log(!isNaN(12312));     // Những hàm có kiểu số khi gán với !isNaN thì = true.
 
 
+console.log(isNaN(NaN));

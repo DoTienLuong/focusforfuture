@@ -16,7 +16,7 @@ setInterval(function() {
     alert('Hiển thị nội dung theo thời gian định sẵn. (1 lần)')
 }, 1000);
 setTimeout(function() {
-    alert('Hiển thị nội dung theo thờ gian định sẵn lặp lại nhiều lần')
+    alert('Hiển thị nội dung theo thời gian định sẵn lặp lại nhiều lần')
 }, 1000);
 
 // 1000 milisecond = 1 second.
