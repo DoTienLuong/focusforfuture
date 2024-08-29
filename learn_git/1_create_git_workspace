@@ -12,3 +12,15 @@
 3. Khai báo danh tính:
     gõ $ git config --global user.name "DoTienLuong_21086591" (thay tên bằng tên của mình) (bỏ $)
     gõ $ git config --global user.email dotienluong1402@gmail.com (thay email của mình vào) (bỏ $)
+
+4. Bắt đầu add và commit
+    - Tạo file .txt và lưu vào thông tin
+    - gõ $ git add .        (đẩy tất cả các file từ workspace lên stage area)
+    - gõ $ git commit -m "First commit"         (đẩy file từ stage area lên git local)
+5. Tạo git repository (tạo remote) và kết nối git local
+    - Tạo git repository trên github.
+    - copy link
+    
+    - quay lại giao diện git bash or cmd:
+    - gõ $ git remote origin https:// link git repository
+    - gõ $ git push origin master
