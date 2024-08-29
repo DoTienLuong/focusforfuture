@@ -1,0 +1,14 @@
+1. Tạo tài khoản git.
+2. Tạo khu vực làm việc với git
+    // cách 1:
+    bước 1: Tạo file và di chuyển đến file đó
+    bước 2: click chuột phải -> git bash here
+    bước 3: gõ "git init" để khởi tạo vùng làm việc với git.
+    // cách 2: 
+    bước 1: tạo file trong cmd hoặc ứng dụng vscode
+    bước 2: di chuyễn đến file đó bằng lệnh cd (xxx)
+    bước 3: new terminal và gõ "git init" để khởi động vùng làm việc
+
+3. Khai báo danh tính:
+    gõ $ git config --global user.name "DoTienLuong_21086591" (thay tên bằng tên của mình) (bỏ $)
+    gõ $ git config --global user.email dotienluong1402@gmail.com (thay email của mình vào) (bỏ $)
