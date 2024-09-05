@@ -63,14 +63,14 @@ var isFree = courses.some(function(course, index){
 })
 console.log(isFree);
 
-//4: find(): duyệt qua các phần tử trong mảng, so sánh với điều kiện và trả kq là ekement
+//4: find(): duyệt qua các phần tử trong mảng, so sánh với điều kiện và trả kq là element
 console.log("\nFind là vòng lặp duyệt qua các phần tử của mảng, so sánh với điều kiện và trả element  (chỉ return 1 kq)");
 var findCourse = courses.find(function(course, index){
     return course.name === 'Ruby';
 })
 console.log(findCourse);
 
-//5: filter(): duyệt qua các phần tử trong mảng, so sánh với điều kiện và trả kq là ekement
+//5: filter(): duyệt qua các phần tử trong mảng, so sánh với điều kiện và trả kq là element
 console.log("\nFilter là vòng lặp duyệt qua các phần tử của mảng, so sánh với điều kiện và trả element  (return nhiều kq)");
 var findCourse = courses.filter(function(course, index){
     return course.name === 'Ruby';
@@ -96,8 +96,8 @@ const sports = [
     },
 ]
 function getMostFavoriteSport(sports){
-    var result = sports.filter(function(result){
-        return result.like > 5;
+    var result = sports.filter(function(element, index){
+        return element.like > 5;
     })
     return result;
 }
