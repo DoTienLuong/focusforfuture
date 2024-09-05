@@ -45,7 +45,7 @@ var courses = [
 var i = 0;
 function coinHandler(accumulator, currentValue, currentIndex, originArray){
     // Tạo 1 hàm declaration để reduce sử dụng các tham số truyền vào.
-    //accumulator biến lưu trữ ?
+    //accumulator biến lưu trữ ? Gia tri khoi tao initial se dc truyen vao accumulator. 
     //currenValue: giá trị hiện tại
     //currenIndex: giá trị của vị trí hiện tại.
     //originArray: mảng hiện tại sau khi thay đổi.

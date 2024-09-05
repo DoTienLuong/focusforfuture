@@ -42,7 +42,7 @@ var courses = [
     },
 ]
 
-//1: forEach(): duyệt qua các phần tử của mảng.
+//1: forEach(): duyệt qua các phần tử của mảng. luu cac phan tu vao bien khoi tao. (accumulator)
 console.log("\nFor Each là vòng lặp duyệt qua các phần tử của mảng.");
 courses.forEach(function(course, index){
     console.log(index, course);
