@@ -1,0 +1,8 @@
+Làm việc trên git với máy khác
+Khi clone source về máy thì chỉ có thể git add . và git commit chứ không thể git push.
+Nguyên nhân là tài khoản git trong Credential Manager đang là tài khoản khác.
+
+Cách 1: 
+    Add quyền cho tài khoản đó.
+Cách 2: 
+    Xoá tài khoản trong Creadential Manager và run lại git thì sẽ đăng nhập tài khoản của mình và lúc đó có thể git push lên bình thường

@@ -6,7 +6,7 @@
     bước 3: gõ "git init" để khởi tạo vùng làm việc với git.
     // cách 2: 
     bước 1: tạo file trong cmd hoặc ứng dụng vscode
-    bước 2: di chuyễn đến file đó bằng lệnh cd (xxx)
+    bước 2: di chuyễn đến file đó bằng lệnh cd .\(xxx)
     bước 3: new terminal và gõ "git init" để khởi động vùng làm việc
 
 3. Khai báo danh tính:
