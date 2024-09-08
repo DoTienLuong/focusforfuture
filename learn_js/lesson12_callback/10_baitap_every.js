@@ -30,3 +30,4 @@ console.log(numbers.myEvery(function (number, index, array) {
 })); // Output: true
 
 
+console.log(numbers.length);
