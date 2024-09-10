@@ -17,5 +17,5 @@ console.log(getTitleFormProduct2);
 
 // Bài tập Get Element cấp 3:
 
-
+ 
 
