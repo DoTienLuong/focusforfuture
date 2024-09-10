@@ -1,0 +1,14 @@
+HTML DOM - Document Object Model: Mô hình đối tượng tài liệu của HTML.
+Mô hình DOM có 3 thành phần: Element, Attribute, Text; (3 thành phần tạo ra website).
+Element: mỗi một thẻ tag là 1 element
+Attribute: mỗi một thuộc tính là 1 Attribute
+Text: mỗi một đoạn chữ, nội dung là 1 text
+
+
+
+mỗi 1 ô trong cấu trúc cây là 1 node.
+khi nhắc tới DOM, ta phải nghĩ tới hình cây bao gồm element, attribute, text
+Các thẻ là các element, các attribute là thuộc tính của các element, các text là nội dung của các element.
+
+
+Javascript có thể thay đổi thành phần trên website bằng cách sử dụng các element, attribute, text;
