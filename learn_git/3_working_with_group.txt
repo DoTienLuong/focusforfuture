@@ -1,0 +1,1 @@
+Trước khi làm việc thì git pull để down git về máy để tránh trường hợp code bị lỗi giữa các thành viên.
