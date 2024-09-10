@@ -6,3 +6,21 @@ Cách 1:
     Add quyền cho tài khoản đó.
 Cách 2: 
     Xoá tài khoản trong Creadential Manager và run lại git thì sẽ đăng nhập tài khoản của mình và lúc đó có thể git push lên bình thường
+
+
+
+*Trường hợp có người mới nhưng họ đã tạo git init.
+    - vẫn git add . và git commit bình thường. Nhưng phải có kết nối tới repository
+    -> sử dụng: git remote add origin <url link>
+    - kiểm tra trạng thái: git remote -v
+    - Sau đó vẫn ko thể push lên được vì git chưa biết mình push lên branch hay master, tuy nhiên phải pull về trước khi push
+    -> sử dụng: git pull origin master  (mỗi 1 lần tài khoản này pull thì phải gõ đầy đủ origin master)
+                git pull origin master --allow-unrelated-histories (thêm --allow-unrelated-histories để cập nhật với lịch sử commit cũ )
+    -> sử dụng: git branch --set-upstream--to=origin/<branch> master  (thay branch bằng tên nhánh (master)) (cách này pull lần đầu, lần sau chỉ cần git pull)
+                git branch --set-upstream--to=origin/master master
+            ->  git pull --allow-unrelated-histories (Phải thêm --allow-unrelated-histories để cập nhật lịch sử commit cũ)
+                (Có thể Khi pull về sẽ hiển thị mục nhập để tạo commit mới, nhập xong gõ :q để thoát)
+
+    -> sử dụng: git push --set-upstream origin master (nếu ở trên đã --set-upstream origin master rồi thì chỉ cần git push)
+            ->  git push
+
