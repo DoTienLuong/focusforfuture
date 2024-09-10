@@ -16,8 +16,9 @@ Cách 2:
     - Sau đó vẫn ko thể push lên được vì git chưa biết mình push lên branch hay master, tuy nhiên phải pull về trước khi push
     -> sử dụng: git pull origin master  (mỗi 1 lần tài khoản này pull thì phải gõ đầy đủ origin master)
                 git pull origin master --allow-unrelated-histories (thêm --allow-unrelated-histories để cập nhật với lịch sử commit cũ )
-    -> sử dụng: git branch --set-upstream--to=origin/<branch> master  (thay branch bằng tên nhánh (master)) (cách này pull lần đầu, lần sau chỉ cần git pull)
-                git branch --set-upstream--to=origin/master master
+    -> sử dụng: git branch --set-upstream-to=origin/<branch> master  (thay branch bằng tên nhánh (master)) (cách này pull lần đầu, lần sau chỉ cần git pull)
+                git branch --set-upstream-to=origin/master master
+                git branch --set-upstream-to=origin/master master
             ->  git pull --allow-unrelated-histories (Phải thêm --allow-unrelated-histories để cập nhật lịch sử commit cũ)
                 (Có thể Khi pull về sẽ hiển thị mục nhập để tạo commit mới, nhập xong gõ :q để thoát)
 
