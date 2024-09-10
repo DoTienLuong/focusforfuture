@@ -11,5 +11,10 @@ git reset: sử dụng trên máyy cá nhân, không thể thay đổi trên c�
     Sau khi code xong thì commit -m => A - B - C - F (HEAD) (F bao gồm C - D -E)
 
 git reset --mixed B
-
+    Quay lại nhưng Staging area ko còn, phải git add . lại những working directory thay đổi.
+    Sau đó git commit và git push
+    
+git reset --hard B      
+    Xoá tất cả những cái đằng sau B 
+    add . và commit rồi push lại
 git log --oneline (hiện mỗi id và commit)

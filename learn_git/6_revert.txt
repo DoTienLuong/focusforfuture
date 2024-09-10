@@ -1,0 +1,1 @@
+Xoá trực tiếp commit hiện tại, tự động tạo commit lưu commit trước đó, thay thế vị trí commit hiện tại.
