@@ -22,7 +22,7 @@
     - copy link
     
     - quay lại giao diện git bash or cmd:
-    - gõ $ git remote origin https:// link git repository       (Kết nối github)
+    - gõ $ git remote add origin https:// link git repository       (Kết nối github)
     - gõ $ git push origin master                               (Đẩy cập nhật lên git)
 
 // xem chi tiết video: https://www.youtube.com/watch?v=8O14qT3jdq0&list=PLodO7Gi1F7R0t9SyEZF5mwfKevCULLjgG&index=1
