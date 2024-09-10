@@ -1,0 +1,15 @@
+git reset: hoàn tác lại commit trước đó.
+git reset: sử dụng trên máyy cá nhân, không thể thay đổi trên cục bộ.
+-   Tức là khi chúng ta bắt đầu làm việc, sau khi git pull về và lỡ 1 ngày nhận ra là code của chúng ta ba hôm trước bị sai.
+    Ta muốn quay lại commit code của 3 ngày trước (giả sử mỗi ngày 1 commit) thì ta dùng reset để quay về code của hôm đó
+        -> git reset HEAD~3
+    chúng ta code và coi như các commit sau ko tồn tại.
+-   git reset --soft B       (quay về commit B, các thay đổi sau đó vẫn nằm trong cây, sẵn sàng commit lại)
+    Ví dụ A - B - C - D - E (HEAD)
+    git reset --soft C => A - B - C (HEAD)
+    D - E vẫn còn trong cây, dùng git status để xem.
+    Sau khi code xong thì commit -m => A - B - C - F (HEAD) (F bao gồm C - D -E)
+
+git reset --mixed B
+
+git log --oneline (hiện mỗi id và commit)

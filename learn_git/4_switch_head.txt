@@ -1,0 +1,17 @@
+1. Tháo HEAD
+Tháo HEAD nghĩa là thay vì switch or checkout sang branch thì giờ mình checkout sanng tên commit
+
+* switch đi đâu là HEAD đang ở đó
+
+
+2. Tham chiếu git với hàm băm (hash)
+Dịch chuyển trong git ko đơn giản với các tên commit,
+các commit đc lưu dưới dạng mã băm (hash code) với chuỗi ký tự rất dài.
+Tuy nhiên, để dịch chuyển chỉ cần lấy 4 ký tự đầu của mã là có thể switch
+Có 2 loại commit tương đối đơn giản:
+    - dịch chuyển lên 1 lần commit gần nhất với ^ (giá trị tương đối)
+    -> ví dụ: git checkout main^: dịch lên commit trên main
+    - dịch chuyển lên nhiều commit xa lắc xa lơ với ~<x> (mã băm) (x: số vị trí muốn nhảy về trước)
+    -> ví dụ: git checkout HEAD~<4> : dịch HEAD về commit trước đó 4 nhảy.
+3. Tham chiếu nâng cao
+    git branch -f main HEAD~3: dịch chuyển nhánh main lên trên HEAD 3 commit

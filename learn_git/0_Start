@@ -1,0 +1,4 @@
+Working Directory (Cây làm việc): Những thay đổi trong file.
+Staging Area (Chỉ mục): Lưu trữ những thay đổi (git add .) trước khi commit.
+Repository (Kho lưu trữ): Nơi lưu trữ lịch sử commit (git commit)
+Local Repository (Kho lưu code project): (git push) đẩy tất cả commit lên project source code.s

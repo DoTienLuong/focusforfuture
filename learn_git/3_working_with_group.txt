@@ -1,1 +1,21 @@
 Trước khi làm việc thì git pull để down git về máy để tránh trường hợp code bị lỗi giữa các thành viên.
+
+Khi có nhiều người làm việc trong 1 dự án, 
+chúng ta cần chia ra các nhánh để dễ quản lý và tránh bị lỗi dữ liệu so với bản code gốc của dự án.
+b1: tạo ra nhánh mới để xử lý.
+    -> git branch FromDoTienLuong 
+    -> git checkout -b FromDoTienLuong (cách 2, tạo nhánh FromDoTienLuong và chuyển vị trí tới nhánh luôn) 
+b2: Để làm việc trên branch thì người dùng cần phải chuyển từ nhánh master sang branch
+    -> git checkout FromDoTienLuong
+    -> git switch FromDoTienLuong (cách 2 - đang thử nghiệm)
+b3: Để merge code giữa các nhánh thì chúng ta đứng ở đâu thì merge gom về đó.
+(Nên đứng về main (master) trước khi merge).
+    -> git switch main (master)
+    -> git merge FromDoTienLuong
+
+    // Cách 2: git rebase: git rebase sẽ gom tất cả commit và tạo thành 1 điểm cuối nối thẳng tất cả các commit.
+        - Ví dụ đứng ở FromDoTienLuong thực hiện lệnh git rebase. Thì sẽ tạo ra commit nối tiếp với main.
+        - Chỉ có FromDoTienLuong đc merge với main, chứ source main vẫn chưa thay đổi và cập nhật.
+        -> phải switch sang main và rebase về FromDoTienLuong thì main mới cập nhật.
+
+* switch đi đâu là HEAD đang ở đó
