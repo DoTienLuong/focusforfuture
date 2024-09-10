@@ -1,0 +1,13 @@
+Bước 1: download vscode.
+Bước 2: download extention:
+    code runner
+    C/C++
+Bước 3: download mingw.
+    - chạy chương trình setup
+    - chọn tất cả các mục cần down, sau đó chọn update.
+    - cập nhật enviroment variables, trong bảng sstem variables, chọn path, chọn new và copy file MinGW\Bin
+bước 4: Tạo file đầu tiên.
+    - Tạo thư mục và đưa vào vscode, tạo file .c hoặc .cpp đầu tiên.
+bước 5: Test thử: 
+    - Chọn Run -> Stardebugging -> g++.exe
+    - Chọn nơi lưu file json .vscode (nếu có), chọn trình chạy C++(GDB/LLDB )
