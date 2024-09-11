@@ -2,19 +2,32 @@ git reset: hoàn tác lại commit trước đó.
 git reset: sử dụng trên máyy cá nhân, không thể thay đổi trên cục bộ.
 -   Tức là khi chúng ta bắt đầu làm việc, sau khi git pull về và lỡ 1 ngày nhận ra là code của chúng ta ba hôm trước bị sai.
     Ta muốn quay lại commit code của 3 ngày trước (giả sử mỗi ngày 1 commit) thì ta dùng reset để quay về code của hôm đó
-        -> git reset HEAD~3
-    chúng ta code và coi như các commit sau ko tồn tại.
--   git reset --soft B       (quay về commit B, các thay đổi sau đó vẫn nằm trong cây, sẵn sàng commit lại)
-    Ví dụ A - B - C - D - E (HEAD)
+
+    Trước khi push thì phải git pull, sau đó cập nhật nội dung commit. Thoát bảng cập nhật bằng Esc -> :wq -> Enter
+
+git reset --soft <id>
+    Khi git reset --soft (Các staging area vẫn sẽ lưu trên repository) (Tức là các commit trước đó vẫn ở trên local)
+    Trên màn hình sẽ không hiện những thay đổi của bất kì commit nào cả.
+    Chúng ta chỉ có thể sửa nội dung mà chúng ta đã viết tại commit mà chúng ta reset --soft quay về.
+    Dù có xóa đi các commit khác thì cũng không up lên được main, bắt buộc chúng ta phải git pull về.
+    A - B - C - D - E
     git reset --soft C => A - B - C (HEAD)
-    D - E vẫn còn trong cây, dùng git status để xem.
+    Chúng ta chỉ có thể sửa những cái của C, chứ nếu dụng vào mấy cái của D và E thì bắt buộc phải git pull lại và push lên.
     Sau khi code xong thì commit -m => A - B - C - F (HEAD) (F bao gồm C - D -E)
 
-git reset --mixed B
-    Quay lại nhưng Staging area ko còn, phải git add . lại những working directory thay đổi.
-    Sau đó git commit và git push
+git reset --mixed <id>
+    Khi git reset --mixed (Các staging area không còn lưu trên repository) 
+    Trên màn hình sẽ hiện những thay đổi của các commit đằng sau.
+    Chúng ta chỉ có thể sửa nội dung mà chúng ta đã viết tại commit mà chúng ta reset --mixed quay về.
+    Dù có xóa đi các commit khác thì cũng không up lên được main, bắt buộc chúng ta phải git pull về.
+    A - B - C - D - E
+    git reset --mixed C => A - B - C (HEAD)
+    Chúng ta chỉ có thể sửa những cái của C, chứ nếu dụng vào mấy cái của D và E thì bắt buộc phải git pull lại và push lên.
+    Sau khi code xong thì commit -m => A - B - C - F (HEAD) (F bao gồm C - D -E)
     
 git reset --hard B      
     Xoá tất cả những cái đằng sau B 
-    add . và commit rồi push lại
+    git add . và git commit để tạo commit mới để lưu.
+    muốn push lên nhưng lúc này các commit đằng sau vẫn còn ở trên local repository, vì thế cần dùng lệnh ép buộc để push:
+    -> git push -f (--force) ! lưu ý khi sử dụng lệnh này thì không thể hoàn tác hay khôi phục các commit đã xóa.
 git log --oneline (hiện mỗi id và commit)

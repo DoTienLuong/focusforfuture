@@ -19,3 +19,6 @@ b3: Để merge code giữa các nhánh thì chúng ta đứng ở đâu thì me
         -> phải switch sang main và rebase về FromDoTienLuong thì main mới cập nhật.
 
 * switch đi đâu là HEAD đang ở đó
+
+Tạo branch mà lưu luôn 1 commit: git checkout -b <branch name> <commit name>
+Để xóa 1 branch, dùng git branch -d <branch name>
