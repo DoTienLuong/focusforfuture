@@ -20,5 +20,3 @@ b3: Để merge code giữa các nhánh thì chúng ta đứng ở đâu thì me
 
 * switch đi đâu là HEAD đang ở đó
 
-Tạo branch mà lưu luôn 1 commit: git checkout -b <branch name> <commit name>
-Để xóa 1 branch, dùng git branch -d <branch name>

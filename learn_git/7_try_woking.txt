@@ -1,0 +1,47 @@
+Khi tạo branch, chúng ta cần cấp quyền push lên cho branch đó. 
+    -> git push -u origin nhom1
+
+Merge đc làm trước khi git push.
+
+
+Trong git, tất cả các branch đều bình đẳng. Không có mô hình branch. 
+-> Vì thế chúng ta phải tự hình dung trong đầu mô hình commit và merge.
+
+Kiểm tra đang ở branch nào:
+-> git branch
+Kiểm tra trên local có branch nào:
+-> git branch -r
+
+Tạo branch mà lưu luôn 1 commit: 
+-> git checkout -b <branch name> <commit name>
+Để xóa 1 branch, dùng 
+-> git branch -d <branch name>
+(Xoá khi chưa push)
+
+Để tạo nhánh theo nhóm, chúng ta cần tạo nhánh theo đúng cú pháp.
+-> git switch / branch / checkout -b Nhom2
+-> git checkout -b Nhom1/DoTienLuong
+Sau khi tạo nhánh, ta cần push và cấp quyền origin 
+-> git push origin Nhom2
+-> git push origin Nhom1/DoTienLuong
+
+Để xoá 1 branch sau khi đã push lên local thì dùng git push origin --delete <branch name>
+-> git push origin --delete Nhom1/DoTienLuong
+-> git push origin -d TranTrongHuy
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Để làm việc push đc git lên nhánh trên local repository 
+thì chúng ta cần tạo nhánh ở local trên máy của mình liên kết với nhánh trên repository.
+git branch / checkout -b <new branch name> <local repository branch name>
+git checkout -b DoTienLuong origin/DoTienLuong
+
+khi merge, chúng ta đứng ở cái tổng để merge cái nhỏ.
+-> (team1) git merge origin/DoTienLuong 
+Sau khi merge, màn hình chúng ta vẫn chưa hiển thị gì, lúc này mới chỉ tạo lệnh merge đưa lên hệ thống duyệt.
+Chúng ta cần pull tất cả thay đổi về
+-> git pull
+Xác nhận và cuối cùng là đẩy lên lại:
+-> git add .
+-> git commit -m "XX"
+-> git push
