@@ -83,3 +83,8 @@ getComments()           // getComments là đã hiển thị một array comment
         console.log(html); 
         commentBlock.innerHTML = html;
     })
+
+
+
+
+// Thực ra, promise cũng có promise hell. =))
