@@ -30,7 +30,7 @@ const loggerAr3 =  (a, b) => ({a: a, b: b})
     const loggerAr4 = (log) => console.log(log);
 //->  
     const loggerAr5 = log => console.log(log);
-// kho chỉ có 1 tham số, có thể loại bỏ ().
+// khi chỉ có 1 tham số, có thể loại bỏ ().
 
 
 
