@@ -1,8 +1,8 @@
 // var vs let:
 // var có thể khai báo lặp lại nhiều lần.      // ctrinh lấy cái sau cùng để thực thi.
-// let chỉ khai báo 1 lần cho 1 biến.
-
 // var có thể code khai báo sau code log. var = undefined;
+
+// let chỉ khai báo 1 lần cho 1 biến.
 // let bắt buộc khai báo trước log.
 
 // const: không cho khai báo lại.

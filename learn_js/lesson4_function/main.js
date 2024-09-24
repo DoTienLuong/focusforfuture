@@ -33,10 +33,14 @@ writeLog2('Log1', 'Log2');
 
 
 // từ khóa return trong hàm.
+
+// Declaration Function
 function cong(a, b){
     return a + b;
 }
 
+
+// Expression Function
 var result = cong(2, 8);
 console.log(result)
 
