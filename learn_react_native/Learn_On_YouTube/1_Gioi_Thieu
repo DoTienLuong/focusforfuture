@@ -1,0 +1,35 @@
+Learn React Native on link: https://www.youtube.com/watch?v=atPKL_H0wxY&list=PLRb-vAn1juPTqQ25wH7EBSAj4IJjBjOl0&index=1
+
+React Js vs React Native là 2 thư viện độc lập
+React JS là cho web
+React chỉ cung cấp công cụ để quản lý trạng thái
+
+React Native là cho app
+Sử dụng các component để điều khiển.
+
+web:
+  - <div>
+  - <p>
+  - <input>
+React Native:
+  - <View>
+  - <Text>
+  - TextInput>
+
+Các câu lệnh:
+1. Cài expo-cli:
+  - npm install -g expo-cli
+2. Tạo expo app:
+  - npx create-expo-app Expo0     -> choose y for yes
+3. Các câu lệnh sử dụng sau khi cài:
+  -cd <expoName>
+  - npm run android
+  - npm run ios (use the Expo app if you need to do IOS development without a Mac)
+  - npm run web
+4. Muốn chạy web thì cd đến file expo.
+  - cd <expoName>
+  - npm start
+
+
+
+// file làm việc trực tiếp: Expo -> app.json
