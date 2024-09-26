@@ -20,7 +20,10 @@ Các câu lệnh:
 1. Cài expo-cli:
   - npm install -g expo-cli
 2. Tạo expo app:
-  - npx create-expo-app Expo0     -> choose y for yes
+// Cách 1: (phiên bản hiện tại, tạo với tiêu chuẩn mới)
+  - npx create-expo-app Expo0     -> choose y for yes (Sửa nội dung trong app/tab/index.tsx)
+
+// Cách 2: Tạo với tiêu chuẩn template blank (Sửa nội dung trong App.js)
 3. Các câu lệnh sử dụng sau khi cài:
   -cd <expoName>
   - npm run android
