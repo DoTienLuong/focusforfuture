@@ -1,0 +1,32 @@
+/**
+ * Các cách tạo App js trong react native:
+ * 
+ */
+
+// import { View } from "react-native";
+
+// Cách 1:
+
+function App(){
+    return(
+        <View></View>
+    );
+}
+
+export default App;
+
+
+// Cách 2:
+const App2 = () => {
+    return(
+        <View>
+
+        </View>
+    )
+}
+export default App2;
+
+// Cách 3:
+export default function App3(){
+
+}

@@ -1,0 +1,96 @@
+useState Hook trong React Native
+useState là một hook trong React (bao gồm cả React Native), được sử dụng để thêm state (trạng thái) vào các functional components. Trước khi có hooks, state chỉ có thể được sử dụng trong class components, nhưng giờ đây với hooks, bạn có thể quản lý trạng thái ngay trong các function components.
+
+Cú pháp cơ bản của useState:
+javascript
+Copy code
+const [state, setState] = useState(initialValue);
+state: Đây là biến lưu trữ giá trị của trạng thái hiện tại.
+setState: Đây là hàm dùng để cập nhật giá trị của trạng thái.
+initialValue: Giá trị khởi tạo của state, có thể là bất kỳ kiểu dữ liệu nào (chuỗi, số, boolean, mảng, đối tượng, v.v.).
+Cách hoạt động của useState:
+Khởi tạo trạng thái: Khi useState được gọi lần đầu tiên, giá trị state sẽ được khởi tạo với initialValue mà bạn truyền vào.
+
+Ví dụ:
+
+javascript
+Copy code
+const [count, setCount] = useState(0);
+count: Được khởi tạo là 0.
+setCount: Hàm này sẽ dùng để thay đổi giá trị của count.
+Cập nhật trạng thái: Để cập nhật giá trị của state, bạn sẽ gọi hàm setState được cung cấp. Khi bạn gọi hàm này, React sẽ:
+
+Cập nhật giá trị của state với giá trị mới bạn truyền vào.
+Re-render (vẽ lại giao diện) component để hiển thị giá trị mới của state.
+Ví dụ, tiếp tục với ví dụ trên:
+
+javascript
+Copy code
+const increment = () => {
+    setCount(count + 1);
+}
+Khi gọi increment(), count sẽ được tăng lên 1 và component sẽ được render lại với giá trị count mới.
+
+Ví dụ chi tiết về useState:
+Giả sử bạn có một button và mỗi khi người dùng nhấn vào button, số lần nhấn sẽ được tăng lên:
+
+javascript
+Copy code
+import React, { useState } from 'react';
+import { View, Text, Button } from 'react-native';
+
+export default function App() {
+  // Sử dụng useState để quản lý số lần nhấn
+  const [count, setCount] = useState(0);
+
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>You clicked {count} times</Text>
+      <Button title="Click me" onPress={() => setCount(count + 1)} />
+    </View>
+  );
+}
+Giải thích:
+Khởi tạo state: const [count, setCount] = useState(0); khởi tạo biến count với giá trị ban đầu là 0 và cung cấp hàm setCount để thay đổi giá trị của count.
+
+Hiển thị state: Text hiển thị số lần mà người dùng đã nhấn vào nút dựa trên giá trị của count.
+
+Cập nhật state: Khi nhấn vào button, hàm onPress gọi setCount(count + 1), làm tăng giá trị count lên 1 và giao diện sẽ được render lại với giá trị mới.
+
+Các lưu ý quan trọng khi sử dụng useState:
+State không được thay đổi trực tiếp: Bạn không thể thay đổi giá trị của state trực tiếp bằng cách gán giá trị như state = newValue. Thay vào đó, bạn phải sử dụng hàm setState được cung cấp bởi useState.
+
+Sai:
+
+javascript
+Copy code
+count = count + 1; // Không nên làm như thế này
+Đúng:
+
+javascript
+Copy code
+setCount(count + 1); // Sử dụng setCount để cập nhật state
+State giữ lại giữa các lần render: Mỗi khi component được render lại (do state thay đổi), React sẽ giữ lại giá trị hiện tại của state. Điều này có nghĩa là khi state được thay đổi, giá trị của nó sẽ không bị reset mà giữ nguyên giữa các lần render.
+
+Hàm cập nhật trạng thái có thể nhận một hàm làm đối số: Đôi khi, bạn có thể cần cập nhật state dựa trên giá trị trước đó. Bạn có thể truyền vào setState một hàm, hàm này nhận giá trị hiện tại của state và trả về giá trị mới.
+
+Ví dụ:
+
+javascript
+Copy code
+const increment = () => {
+    setCount((prevCount) => prevCount + 1);
+}
+Ở đây, prevCount là giá trị trước đó của count, và chúng ta trả về prevCount + 1.
+
+useState có thể lưu trữ mọi loại giá trị: Bạn có thể lưu trữ bất kỳ loại dữ liệu nào trong state, bao gồm chuỗi, số, mảng, đối tượng, v.v. Điều này rất linh hoạt và hữu ích trong nhiều trường hợp.
+
+Tóm tắt:
+useState giúp thêm state vào các functional component.
+Mỗi lần gọi useState, bạn nhận được hai giá trị: giá trị hiện tại của state và hàm để cập nhật giá trị của state.
+Khi state thay đổi, React tự động render lại component để phản ánh các thay đổi trên giao diện.
+
+
+
+
+

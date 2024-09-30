@@ -1,0 +1,11 @@
+Nếu ko cài đc react navigation, fix thử như sau:
+1: Cài yarn: npm install -g yarn
+2: Xoá cache npm: npm cache clean --force
+3: 
+rm -rf node_modules package-lock.json yarn.lock
+npm install
+4: 
+npm install @react-navigation/native
+npm install react-native-screens react-native-safe-area-context
+npm install @react-navigation/stack
+

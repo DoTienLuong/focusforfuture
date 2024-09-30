@@ -24,6 +24,19 @@ Các câu lệnh:
   - npx create-expo-app Expo0     -> choose y for yes (Sửa nội dung trong app/tab/index.tsx)
 
 // Cách 2: Tạo với tiêu chuẩn template blank (Sửa nội dung trong App.js)
+  npx create-expo-app Expo0 --template blank
+(Nếu không create đc thì do máy yêu cầu quyền chứng thực gì gì đó. thực hiện các lệnh dưới đây):
+    1. run window power shell với administrator
+    2. Get-ExecutionPolicy
+    3. Set-ExecutionPolicy RemoteSigned (chọn Y)
+    RemoteSigned cho phép chạy các script từ internet chỉ khi chúng có chữ ký hợp lệ. Các script cục bộ (trên máy tính của bạn) có thể chạy mà không cần chữ ký.
+    4. Tạo lại expo: 
+      -> expo init Expo1 --template blank
+    5. Install web vs dom:
+      -> npx expo install react-nativce-web react-dom
+      -> npm install    (fix các lỗi sau khi cập nhật).
+      ; -> npm audit fix --force
+
 3. Các câu lệnh sử dụng sau khi cài:
   -cd <expoName>
   - npm run android
@@ -31,8 +44,18 @@ Các câu lệnh:
   - npm run web
 4. Muốn chạy web thì cd đến file expo.
   - cd <expoName>
-  - npm start
-
+  - npm start  or npx expo start
+  - muốn thoát: Ctrl + C
 
 
 // file làm việc trực tiếp: Expo -> app.json
+
+
+
+
+
+Code test: 
+1: 
+  https://snack.expo.dev/
+2: 
+  https://www.reactnative.express/react/hooks/usestate
