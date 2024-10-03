@@ -1,0 +1,20 @@
+Khi reset lại máy, git có thể ko nhận và cần cập nhật lại quyền truy cập
+
+
+PS D:\Tryhard\0_focusforfuture> git remote -v
+fatal: detected dubious ownership in repository at 'D:/Tryhard/0_focusforfuture'
+'D:/Tryhard/0_focusforfuture' is owned by:
+        (inconvertible) (S-1-5-21-3316209043-3836274409-4022119932-1001)
+but the current user is:
+        LAPTOP-D9RVQH4B/ChuBeLuong (S-1-5-21-2120964513-160225438-3188340360-1001)
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory D:/Tryhard/0_focusforfuture
+PS D:\Tryhard\0_focusforfuture>
+ *  History restored 
+
+PS D:\Tryhard\0_focusforfuture> git config --global --add safe.directory D:/Tryhard/0_focusforfuture
+PS D:\Tryhard\0_focusforfuture> git remote -v
+origin  https://github.com/tieluodo/focusforfuture.git (fetch)
+origin  https://github.com/tieluodo/focusforfuture.git (push)
+PS D:\Tryhard\0_focusforfuture>
