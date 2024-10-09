@@ -9,3 +9,5 @@ npm install @react-navigation/native
 npm install react-native-screens react-native-safe-area-context
 npm install @react-navigation/stack
 
+// cài đặt icon
+npx expo install react-native-vector-icons
