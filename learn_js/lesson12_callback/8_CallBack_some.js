@@ -43,8 +43,8 @@ Array.prototype.mySome = function(callBack){
         if(this.hasOwnProperty(index)){
             var kq = callBack(this[index], index, this);
             // console.log(kq);
-            if(kq){             // nếu kq thoả điều kiện
-                result = true;    // Chỉ cần gặp đúng phần tử thoả điều kiện là return true.
+            if(kq == true){             // nếu kq thoả điều kiện
+                result = kq;    // Chỉ cần gặp đúng phần tử thoả điều kiện là return true.
                 break;
             }
         }

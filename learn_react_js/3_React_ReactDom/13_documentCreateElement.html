@@ -1,0 +1,31 @@
+Trong html, nếu như chúng ta không có element nào, 
+chúng ta có thể sử dụng script để tạo element cho html. 
+
+
+
+<body>
+    <!-- 
+    1. document.createElement()
+    2. document.body.appendChild()
+    3. console.dir()
+    4. innerText, id, className, style
+    -->
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById('root');
+        const h1 = document.createElement('h1');
+
+        h1.innerText = "Hello Guy";
+        h1.id = "Heading";
+        h1.className = "test class-2"
+        h1.style.color= "red"                       // Cách 1
+        h1.style = "color: green; fontsize: 30px"   // Cách 2
+        Object.assign(h1.style,{                    // Cách 3
+            color: 'blue',
+            backGroundColor: 'red'
+        })
+        console.log(h1);
+
+        root.appendChild(h1);           // Thêm element h1 vào root
+    </script>
+</body>

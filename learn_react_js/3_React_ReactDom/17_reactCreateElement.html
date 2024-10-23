@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+</head>
+<body>
+    <!-- 
+    1. React.createElement() -> React element
+    2. So sánh document.createElement() vs react.createElement()
+    3. Thay đổi: id, className, style,...
+    4. thêm HTML, text
+    5. Tạo:
+        <h1 title = "hello" class = "heading"> Hello guys! </h1>
+
+    6. Tạo: 
+        <ul>
+            <li>Javascript</li>
+            <li>ReactJS</li>
+        </ul>
+    7. Tạo: 
+        <div class = "post-item">
+            <h2 title="Học React tại F8">Học ReactJS</h2>
+            <p>Học React JS từ cơ bản tới nâng cao</p>
+        </div>
+    --> 
+
+    <script>
+        // Dom
+        const h1Dom = document.createElement('h1');
+        h1Dom.title = 'Hello';
+        h1Dom.className = 'heading';
+        h1Dom.innerText = 'Hello Guys!';
+        document.body.appendChild(h1Dom);
+
+        // React -> React-DOM
+        // react.createElement(type, props, children, n)
+        const h1React = React.createElement('h1', {
+            title: 'hello',
+            className: 'heading'
+        }, 'Hello guys!');
+
+        console.dir(h1Dom);
+        console.log(h1React);
+
+    </script>
+</body>
+</html>

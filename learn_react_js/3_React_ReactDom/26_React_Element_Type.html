@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="App"></div>
+    <script type="text/babel">
+        function Item(){ // Tên function phải viết hoa thì mới nhận được vào render.
+            return( 
+                <div class="post-item">
+                    <img src = "link" alt="Hình ảnh"></img>
+                    <h2 class="post-title">Cách sử dụng React Element Types</h2>
+                    <p class="post-desc">Bạn có kiến thức bla bla bla</p>
+                    <p class="post-publisher">Bạn có kiến thức bla bla bla</p>
+                </div>
+            )
+        }
+
+        const app = (
+            <div class="posts-list">
+                <Item></Item>
+            </div>
+        )
+        ReactDOM.render(app, document.getElementById("App"));
+    </script>
+</body>
+</html>

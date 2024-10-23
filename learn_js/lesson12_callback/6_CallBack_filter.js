@@ -6,13 +6,13 @@ var arr = arrNumber.filter(function(element, index, array){
 
 console.log(arr);
 
-Array.prototype.myFilter = function(callBack){
+Array.prototype.myFilter = function(callBack){ // filter là so sánh, nếu đúng thì xuất giá trị đúng
     var result = [];
     for(var index in this){
         if(this.hasOwnProperty(index)){
             var kq = callBack(this[index], index, this)
             // console.log(kq);
-            if(kq){
+            if(kq == true){
                 result.push(this[index]);
             }
         }
