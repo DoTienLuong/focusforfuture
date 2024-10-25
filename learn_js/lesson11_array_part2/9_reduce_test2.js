@@ -13,3 +13,20 @@ var arr = [
     ['age', 18],
 ];
 console.log(arrToObj(arr)); // { name: 'Sơn Đặng', age: 18 }
+
+const course = [
+    {
+        name: 'HTML, CSS'
+    },
+    {
+        name: 'Responsive web design'
+    },
+    {
+        name: 'ReactJS'
+    }
+]
+const code = course.reduce(function(obj, element){
+    obj[element.name] = element;
+    return obj;
+},{});
+console.log(code);

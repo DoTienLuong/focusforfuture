@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<body>
+    <!-- 
+    Câu hỏi thường gặp:
+    1. Tại sao khi code thuần dùng map phải join()..
+    2. Gặp lỗi khi render từ mảng (prop "key").
+    3. Không render được 2 elements cùng lúc. => Phải có 1 thẻ ôm bên ngoài để nó có thể render. ==>> Sử dụng <React.Fragment> 
+    -->
+    <div id="root"></div>
+    <script type="text/babel"> // phải có type = "text/bable" để render bằng bable.
+        const courses = [
+            {
+                name: 'HTML, CSS'
+            },
+            {
+                name: 'Responsive web design'
+            },
+            {
+                name: 'ReactJS'
+            }
+        ]
+        const kqBaiTap = courses.map(function(course, index){
+            return <li key={index}> {course.name} </li>;
+            
+        })
+        // Vì kqBaiTap là 1 mảng các phần tử React hợp lệ (như <li>). React sẽ biên dịch được và render tuần tự.
+        const ul = <ul>
+                {kqBaiTap}
+            </ul>
+        ReactDOM.render(ul, document.getElementById('root'));
+
+        // Fragment. cách 1.
+        const jsx = (
+            <Fragment>
+                <li>Nội dung 1</li>
+                <li>Nọi dung 2</li>
+           </Fragment>
+        )
+
+        // fragment. Cách 2:
+        const jsx2 = React.createElement(
+            React.Fragment,
+            null,
+            React.createElement('h1', null, 'Nội dung 11'),
+            React.createElement('h2', null, 'Nội dung 12'),
+        )
+
+
+
+    </script>
+</body>
+</html>

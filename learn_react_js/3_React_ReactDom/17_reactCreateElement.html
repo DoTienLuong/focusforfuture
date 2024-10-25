@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
 </head>
 <body>
+    <!-- 
+        link: https://17.reactjs.org/docs/add-react-to-a-website.html
+    -->
     <!-- 
     1. React.createElement() -> React element
     2. So sánh document.createElement() vs react.createElement()
@@ -26,23 +32,48 @@
             <p>Học React JS từ cơ bản tới nâng cao</p>
         </div>
     --> 
-
-    <script>
+    <div id="root"></div>
+    <script type="text/babel">
         // Dom
-        const h1Dom = document.createElement('h1');
-        h1Dom.title = 'Hello';
-        h1Dom.className = 'heading';
-        h1Dom.innerText = 'Hello Guys!';
-        document.body.appendChild(h1Dom);
+        // const h1Dom = document.createElement('h1');
+        // h1Dom.title = 'Hello';
+        // h1Dom.className = 'heading';
+        // h1Dom.innerText = 'Hello Guys!';
+        // document.body.appendChild(h1Dom);
+        // console.dir(h1Dom);
+
 
         // React -> React-DOM
-        const h1React = React.createElement('h1', {
-            title: 'hello',
-            className: 'heading'
-        }, 'Hello guys!');
+        // const h1React = React.createElement(
+        //     'h1', 
+        //     {
+        //         title: 'hello',
+        //         className: 'heading'
+        //     },
+        //     'Hello guys!');
+        // console.log(h1React);
 
-        console.dir(h1Dom);
-        console.log(h1React);
+        const courses = [
+            {
+                name: 'HTML, CSS'
+            },
+            {
+                name: 'Responsive web design'
+            },
+            {
+                name: 'ReactJS'
+            }
+        ]
+        const kqBaiTap = courses.map(function(course, index){
+            return <li> {course.name} </li>;
+            
+        })
+        // Vì kqBaiTap là 1 mảng các phần tử React hợp lệ (như <li>). React sẽ biên dịch được và render tuần tự.
+        const ul = <ul>
+                {kqBaiTap}
+                
+            </ul>
+        ReactDOM.render(ul, document.getElementById('root'));
     </script>
 </body>
 </html>

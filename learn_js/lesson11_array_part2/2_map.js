@@ -43,3 +43,21 @@ function copyCourses(ele, index){
 }
 var newCourses = courses.map(copyCourses);
 console.log(newCourses);
+
+
+const courseBai22 = [
+    {
+        name: 'HTML, CSS'
+    },
+    {
+        name: 'Responsive web design'
+    },
+    {
+        name: 'ReactJS'
+    }
+]
+var kqBai22 = courseBai22.map(function(ele, inndex){
+    return `<li> ${ele.name} </li>`
+})
+
+console.log(kqBai22);
