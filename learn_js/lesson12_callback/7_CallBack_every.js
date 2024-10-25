@@ -11,7 +11,7 @@ Array.prototype.myEvery = function(callBack){
     for(var index in this){
         var kq = callBack(this[index], index, this);
         // console.log(kq);
-        if(kq){             // nếu kq thoả điều kiện
+        if(kq == false){             // nếu kq thoả điều kiện
             result = false;   // Chỉ cần thoả điều kiện 1 lần là return false.
         }
     }

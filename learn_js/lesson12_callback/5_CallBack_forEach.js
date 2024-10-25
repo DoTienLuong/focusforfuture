@@ -14,8 +14,8 @@ var courses = [
     'CSS', 
     'HTML'
 ]
-courses.myForEach(function(courses, index, array){
-    console.log(courses, index, array);
+courses.myForEach(function(course, index, array){
+    console.log(course, index, array);
 });
 // console.log(courses);
 // console.log(Array.prototype);
