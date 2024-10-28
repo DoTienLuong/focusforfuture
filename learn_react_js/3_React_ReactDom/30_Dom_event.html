@@ -73,22 +73,29 @@
             }
         ]
 
-        const CourseItem = ({props}) => {     // Chúng ta có thể sử dụng destructuring để sửa dụng. Tức là object mà chúng ta truyền vào phải là object có dữ liệu và có các props mà chúng ta sử dụng trong 
+
+        // component UI
+        const CourseItem = ({outCourse, fnOnClick}) => {     
+            // Chúng ta có thể sử dụng destructuring để sửa dụng. Tức là object mà chúng ta truyền vào phải là object có dữ liệu và có các props mà chúng ta sử dụng trong 
             // Hàm này được thiết kế để hiển thị view gồm những cái gì và giá trị được lấy từ đâu.
-            // Truyền vào cái gì là sẽ lấy cái đó để return chứ ko có đặt tên lung tung đc.               
+            // Truyền vào cái gì là sẽ lấy cái đó để return chứ ko có đặt tên lung tung đc.         
+            
+            
+            // Hàm fnOnClick là props đc truyền vào dưới dạng hàm, nó gọi hàm handleClick đc tạo ra trong App.
+            // Hàm handleClick lại truyền 1 đối số là course để xử lý. Nên mình gọi hàm fnOnClick(outCourse) để nó thực hiện xử lý sự kiện theo đúng yêu cầu.
             return(
                 <div>
                     <h2
-                        onClick = {()=>{alert(props.title)}}
+                        onClick = {()=> fnOnClick(outCourse)}
                     >   
-                        {props.title}
+                        {outCourse.title}
                     </h2>              
                     <img 
-                        onDoubleClick = {()=>{alert(props.title)}}
-                        src={props.image_url}
+                        onDoubleClick = {()=> fnOnClick(outCourse)}
+                        src={outCourse.image_url}
                     >    
                     </img>
-                    <p>{props.description}</p>
+                    <p>{outCourse.description}</p>
                 </div>
             // Tạo function truyền đối số là 1 object hoặc là props (props là khi trong Dữ liệu truyền vào app tất cả đều là props (key:value))
             // object.title (lấy giá trị của thuộc tính (title) mà props trỏ tới).
@@ -96,14 +103,19 @@
             
             )
         } 
+        //Container Component
         function App (){
+            const handleClick = (course)=>{             // Hàm handleClick truyền course để xử lý event theo thông tin của course được lấy từ hàm map.
+                alert(course.title)
+            }
             return(
                 <div id="Wrapper">
                     {coursesData.map((course)=>(        // gọi hàm map để lọc dữ liệu theo ý muốn.
                                                         // Mỗi 1 lần 1 phần tử duyệt thì phần tử đó sẽ gọi hàm CourseItem, ko chỉ gọi lại hàm Courese mà còn gọi lại các props để lưu các course đc duyệt từ map.    
                         <CourseItem                     // gọi hàm CoureseItem để truyền các đối số là dữ liệu mà đc lấy từ Array.
-                            key = {course.id}           // Coi như các key, outCourse là props của CourseItem.
-                            props = {course}        // CourseItem đang có prop đầu tiên là key = {coures.id}, props2 = object {course} được trả về từ hàm map.
+                            key = {course.id}           // key để định danh các course ko bị trùng lặp
+                            outCourse = {course}        // CourseItem đang có prop đầu tiên là key = {coures.id}, outCourse = object {course} được trả về từ hàm map.
+                            fnOnClick = {handleClick}   // fnOnClick = hàm handleClick()
                         />
                     ))}
                 </div>
