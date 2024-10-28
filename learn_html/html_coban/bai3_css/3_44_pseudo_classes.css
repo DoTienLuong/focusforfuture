@@ -1,0 +1,25 @@
+:root{
+    --font-color: red;
+}
+.root {
+    color:var(--font-color);
+}
+
+.hover:hover{
+    color: red;
+    font-size: 20px;
+}
+
+.active:active{
+    color: blue;
+    font-size: 20px;
+}
+
+.first:first-child{
+    color: aqua;
+    font-size: 20px;
+}
+.last:last-child{
+    color:blueviolet;
+    font-size: 20px;
+}

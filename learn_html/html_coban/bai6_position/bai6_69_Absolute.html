@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Relative?</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="bai6_relative.css">
+        <style>
+            html ,body{
+                margin:0;
+            }
+            .box{
+                width: 500px;
+                height: 250px;
+                position: relative;
+                background-color: #ccc;
+            }
+            .box-child{
+                background-color: rgba(128,0,128,0.5);
+                position: Absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                /* 
+                Hiểu nôm na Absolute là tạo lớp đè 
+                Nhưng bị phụ thuộc vào position cha gần nhất làm gốc toạ độ. */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>position</h1>
+        <li>relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+        <div class="box">
+            F8 - Học lập trình để đi làm
+            <div class="box-child"></div>
+        </div>
+    </body>
+</html>

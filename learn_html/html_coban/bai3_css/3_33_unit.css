@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 50px;
+}
+.box1 {
+    height: 25%;
+    width: 25%;
+    background-color: red;
+    font-size: 25%;
+}
+.box2 {
+    height:50%;
+    width: 50%;
+    background-color: blue;
+    font-size: 50%;
+}
+.box3 {
+    height: 75%;
+    width: 75%;
+    background-color: yellow;
+    font-size: 75%;
+}
+.box4{
+    height: 100%;
+    width:100%;
+    background-color: violet;
+    font-size: 100%;
+}
+.box5{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    font-size: rem;
+}
+a{
+    font-size: rem ;
+    color: red;
+    background-color: brown;
+}

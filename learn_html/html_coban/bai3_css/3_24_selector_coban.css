@@ -1,0 +1,65 @@
+/*      CLASS : lớp
+.class: chi can co class title là sẽ áp dụng style.
+.title {   
+    color: red;
+} 
+*/
+
+
+/* .class1.class2:  style cho các tag chứa 2 class. */
+.title.heading { 
+    color: red;
+}
+
+
+/* .class1 .class2: style cho class con nằm trong class cha.  */
+.box .title {  
+    color: red;
+}
+
+/* 
+* : áp dụng cho tất cả các thẻ.
+* {            
+    color: red;
+} */
+
+
+
+/*         ELEMENT : thẻ 
+element: áp dụng cho tất cả thẻ h2.
+h2{           
+    Color: brown;
+} */
+
+/* 
+element.class : áp dụng cho thẻ chứa lớp đó. 
+h2.title {
+    color: brown;
+} */
+
+/* 
+.class1, .class2, .class3 : áp dụng cho các lớp được liệt kê.
+.title1, .title2, .title3 {
+    color: red;
+} */
+
+/* element element : áp dụng cho các thẻ con trong thẻ lớn, 
+tương đương với .class1 .class2 */
+
+/* 
+.class > .class : áp dụng cho class con trực tiếp 
+.box > .title {
+    color: brown;
+} */
+
+/* 
+.class + .class : áp dụng cho class anh em liền kề. (lấy ở dưới) 
+.title + .title{
+    color: red;
+} */
+
+/*
+.class ~ .class : áp dụng cho class anh em không cần liền kề. 
+.title ~ .title {
+    color: red;
+} */

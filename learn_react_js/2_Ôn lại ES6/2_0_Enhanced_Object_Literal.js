@@ -14,8 +14,11 @@ console.log(info)
 const info2 = {
     ten,
     tuoi,
-    getName(){
+    getName(){                  // key là getName, định nghĩa luôn là function.
         return ten;
+    },
+    getTuoi: function(){        // key là getTuoi, value là 1 function.
+        return tuoi;
     }
 }
 console.log(info2);         

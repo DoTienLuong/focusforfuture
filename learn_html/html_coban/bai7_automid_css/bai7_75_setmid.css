@@ -1,0 +1,33 @@
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    margin: 0;
+    background-color: orange;
+    height: 100px;
+
+    /* text-align: center;
+    line-height: 100px; 
+    /* Cho chiều cao line-height = chiều cao dòng(height)
+    Thì line auto ra giữa. */
+
+    display: flex;
+    align-items: center;        
+    justify-content: center; 
+
+    position: relative;
+
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    
+
+}

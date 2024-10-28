@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+}
+.container::after{
+    content: ""; 
+    display: block;
+    width: 50%;
+    height: 50vh;
+    background-color: red;
+}
+/* content, display la 2 thứ bắt buộc phải có trong pseudo-element
+-Những pseudo element (element giả) 
+    ::after 
+    ::before
+    ::first-line
+    ::first-letter
+    ::selection
+*/

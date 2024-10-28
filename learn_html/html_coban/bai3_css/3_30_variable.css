@@ -1,0 +1,7 @@
+:root {
+    --text-color: brown;
+}
+
+h1:hover {
+    color: var(--text-color);
+}

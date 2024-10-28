@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Relative?</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="bai6_relative.css">
+        <style>
+            html ,body{
+                margin:0;
+            }
+            h1{
+                margin-top: 60px;
+                top: 100px;
+                left: 100px;
+            }
+            ul{
+                height: 2000px;
+            }
+            .header{
+                top: 0;
+                width:100%;
+                height: 42px;
+                background-color: #333;
+                position: fixed;
+                /* Ví dụ: cố định thanh task
+                        theo cửa sổ tab. */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+
+        <h1>position</h1>
+        <ul>
+            <li>relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+        
+    </body>
+</html>

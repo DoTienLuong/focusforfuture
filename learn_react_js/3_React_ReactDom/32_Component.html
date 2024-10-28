@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <!-- 
+        1. Quy ước đặt tên Component: 
+            -> Luôn đặt tên component chữ cái đầu phải viết hoa, các chữ sau viết hoa theo camelCase.
+    -->
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        
+        const Form = {                              // tạo form là 1 object. Trong đó là 
+            Input(){                                // Enhanced Object Literal <> Input: function(){ return <input />} (ES6)
+                return <input />                    // function này return thành component, bất kể function nào cũng có thể làm function component.
+            },
+            Checkbox(){
+                return <input type="Checkbox" />
+            }
+        }
+
+        // Bài tập:
+        const BtnButton = ({title, href, fnOnClick}) => {       // Cái nào là function thì viết xuống cuối cho nó dễ nhìn. =)) 
+                                                                // function BtnButton này return thành component, truyền các đối số được lấy từ App
+            
+            let ComponentButton = 'button';
+            let noiDungAlert = "Xin chào Đỗ Tiến Lượng";
+
+            const props = {}
+            if(fnOnClick){
+                // props.onClick =  fnOnClick(noiDungAlert);           // Mới vô cái alert luôn, là vì onClick của props là 1 hàm alert. Mới hiển thị button là alert luôn. (cái này được hiểu là gọi hàm)
+                props.onClick = () =>  fnOnClick(noiDungAlert);     // onClick của props này được gọi đúng cú pháp của fn onClick mặc định của button.
+            }
+
+            return(                                             
+                <ComponentButton {...props}>{title}</ComponentButton>           // props có object là onClick, khi giải nó ra thì ComponentButton có các object của props
+            )
+
+        }
+
+
+        const App = () => {
+            // Cách 2:
+            const type = 'Checkbox';        // Tạo 1 biến lưu type
+            const Component = Form[type];   // Tạo biến lưu giá trị trả về của Form[type] với type là biến Enhanced Object Literal
+            const click = (noidung) => {alert(noidung)}
+            // Cách 1:
+            return(
+                <div id="Wrapper">
+                    <Form.Input />    
+                    <Component />  
+                    <BtnButton                          // truyền các props vào BtnButton, có 1 props là function (fnOnClick)
+                        title = "Click Me"
+                        href = "link"
+                        fnOnClick={click}
+                    />               
+                </div>
+            )
+
+        }
+        ReactDOM.render(<App />, document.getElementById("root"))
+    </script>
+</body>
+</html>
