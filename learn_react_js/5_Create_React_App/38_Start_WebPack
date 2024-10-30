@@ -1,0 +1,65 @@
+Part 1: install project
+
+b1: khởi tạo vùng chứa dự án.
+    npm init 
+    gõ enter tới cuối.
+b2: Cài đặt webpack
+    npm install webpack webpack-cli --save-dev
+
+Nó sẽ tạo ra thư mục node_modules
+--save-dev để đánh dấu 2 thư viện này chỉ dùng trong khi phát triển, khi dự án đẩy lên production sẽ không có các thư viện này.
+Sau khi lệnh trên chạy xong, webpack và webpack-cli sẽ được thêm vào devDependencies:
+
+b3: Cài ReactDOM
+    npm install react@17.0.2 react-dom@17.0.2 --save
+
+--save để thêm các thư viện được cài vào phần dependencies trong package.json. Đây là các thư viện được sử dụng trong dự án, 
+bao gồm cả development & production. Từ phiên bản NPM 5 trở đi thì 
+--save được thêm vào mặc định, nếu bạn đang sử dụng NPM >= 5 thì có thể không cần --save.
+cài xong thì sẽ hiển thị trong pakage.json
+
+b4: Cài đặt babel
+    npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+babel-core: Chuyển đổi ES6 về ES5
+babel-loader: Cho phép chuyển các files Javascript sử dụng Babel & Webpack
+babel-preset-env: Cài đặt sẵn giúp bạn sử dụng Javascript mới nhất trên nhiều môi trường khác nhau (nhiều trình duyệt khác nhau). Gói này đơn giản là support truyển đổi ES6, ES7, ES8, ES... về ES5.
+babel-preset-react: Hỗ trợ chuyển đổi JSX về Javascript
+
+Start:
+
+    Tạo index.html 
+        Tại thư mục gốc của dự án hãy tạo file public/index.html
+    Tạo index.js
+        Tại thư mục gốc của dự án hãy tạo file src/index.js
+
+
+
+Part 2: Cấu hình webpack
+b1: Cài đặt CSS-Loader và Style-Loader
+    npm install css-loader style-loader --save-dev
+b2: Cài đặt webpack.config.js
+    Tạo file webpack.config.js tại thư mục gốc của dự án
+b3: Tạo babelrc
+    Tại thư mục gốc dự án tạo file .babelrc
+b4: Thêm scripts cho dự án
+    "scripts": {
+    ...
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+    }
+b5: run 
+    npm start
+    npm run build
+    
+b6: cài webpack html
+    npm install html-webpack-plugin --save-dev
+
+
+Part 3: Cài đặt webpack server
+b1: Cài webpack dev server
+    npm install webpack-dev-server --save-dev
+b2: config lại pakage.json
+    "start": "webpack-dev-server --mode development --open --hot",
+
+

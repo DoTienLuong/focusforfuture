@@ -57,6 +57,8 @@
 
         // Tạo Component View App
         const App = ()=> {
+        let noiDungAlert = "Xin chào, bạn làm được tới đây là nắm được 90% bài rồi nè."
+        
             return(
                 <div className="container">
                     <ViewHeader 
@@ -65,7 +67,8 @@
                     <ViewBody 
                         title = "Ấn vào đây để hiện kết quả"
                         fnClick = {click}
-                    />                    
+                    />                
+                    <button onClick = {()=> click(noiDungAlert)} >Nhấn để xem thông báo</button>    
                 </div>
             )
         }

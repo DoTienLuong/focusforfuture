@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Children Props</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Props có thể truyền là "String Literal" hoặc là {Expression}. 
+        // Expression có thể là bất cứ kiểu dữ liệu gì, có thể là function, có thể là array hoặc cũng có thể là object.
+        // 1: Spread vs Rest
+        function Input( {label, ...inputProps}){        // Truyền vào hàm thì gọi là rest, giải nó ra thì gọi là spread
+            return(
+                <div>
+                    <label>{label}</label>
+                    <input {...inputProps}></input>     
+                </div>
+            )
+        }
+
+        // 2: children props
+        //Chúng ta có thể lấy children làm prop
+        function Button({title, children}){
+            // return <button>{title}</button>         // Nút button có thể lấy tên bằng lấy props như cách bình thường (cách 1)
+            return <button>{children}</button>      // Nut button có thể ghi tên trong thẻ bằng cách truyền children (cách 2)
+        }
+
+        
+        // 3: Render props?
+        function List({data, children}){  // Truyền prop là data với kiểu dữ liệu là array.  || children là cách 2.
+            // Cách 1: {data.map((item, index) => <li key={index}>{item}</li>)}     (copy vào <ul> here </ul>)
+            return(
+                <ul>
+                    {data.map((item, index) => children(item, index))}
+                </ul>
+            )
+            // {data.map(children)}
+        }
+
+
+
+
+        function App(){
+            const cars = ["Rush", "Innova", "Fortuner"]
+            return(
+                <div id="wrapper">
+                    <Input 
+                        label = "Full Name"
+                        type  = "text"
+                        placeholder = "Enter Your Name"
+                        onFocus = {()=> {
+                            console.log(Math.random())
+                        }}
+                    />
+                    <Button
+                        title = "My Button"
+                    >
+                        {false || "I'm a button"} 
+                    </Button> 
+
+                    <List data={cars}>
+                        {(item, index) => <li key={index}>{item}</li>}
+                    </List>
+                </div>
+            )
+        }
+        ReactDOM.render(<App/>, document.getElementById("root"));
+
+    </script>
+</body>
+</html>

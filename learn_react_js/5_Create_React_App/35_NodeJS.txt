@@ -1,0 +1,20 @@
+NodeJS:  là 1 môi trường JavaScript run time độc lập giúp chúng ta thực thi code JavaScript trên đó.
+
+
+Tại sao phải sử dụng NodeJS.
+    - NodeJS tạo ra máy chủ sử dụng trên web server. (tương tự liveServer)
+    - Tạo ra dự án để sử dụng react js 
+    - Hệ sinh thái của nodejs có npm giúp chúng ta phát triển code tối ưu hơn.
+    - Có nhiều plugin hỗ trợ chuẩn code. Phát triển ứng dụng, loại bỏ xuống dòng, comment, bla bla bla, giảm dung lượng file. (giúp ng dùng down dễ hơn).
+
+Trời hôm nay thì đẹp
+Em thì măc đồ xinh
+Em hãy chụp nhiều hình
+Cho anh ngắm với nhé 
+
+Ngắm em Kim Cương
+Xinh đẹp dễ thương 
+Sở thích ngủ nướng 
+Nhưng anh vẫn thương
+
+webpack: công cụ compile file thành 1 chuẩn gọn hơn.
