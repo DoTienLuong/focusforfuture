@@ -1,0 +1,25 @@
+Trc khi học hooks: 
+    - ClassComponent: Xây dựng component đầy đủ tính năng.
+    - functionComponent: Xây dựng UI component.
+Sau khi học hooks:
+    - Xây dựng functionComponent có nhiều tính năng
+    - Vẫn phải sử dụng ClassComponent để thể hiện logic của class  *
+
+Hooks?
+    là những method đc tạo ra bởi JS. Hỉu đơn giản là function thôi :>>
+    gồm:   
+        useState()
+        useEffect()
+        useLayoutEffect
+        useRef
+        useCallBack
+        useMeMo
+        useReducer
+        useContext
+        useImperativeHandle
+        useDebugValue
+
+    1. Chỉ dùng cho functionComponent
+    2. Component đơn giản và dễ hiểu
+    3. Khi nào sử dụng hook?
+        Khi có dự án mới -> auto dùng hooks cho nhanh.
