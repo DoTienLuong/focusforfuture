@@ -115,11 +115,13 @@
                         <CourseItem                     // gọi hàm CoureseItem để truyền các đối số là dữ liệu mà đc lấy từ Array.
                             key = {course.id}           // key để định danh các course ko bị trùng lặp
                             outCourse = {course}        // CourseItem đang có prop đầu tiên là key = {coures.id}, outCourse = object {course} được trả về từ hàm map.
-                            fnOnClick = {handleClick}   // fnOnClick = hàm handleClick()
+                            fnOnClick = {handleClick}   // prop fnOnClick = hàm handleClick()
                         />
                     ))}
                 </div>
             )
+                // *** props là truyền dữ liệu từ component cha xuống component con. 
+                // *** props có kiểu dữ liệu nguyên thuỷ hoặc kiểu dữ liệu theo dạng tham chiếu (hàm, object, array)
         }
         ReactDOM.render(<App />, document.getElementById("root"));
     </script>

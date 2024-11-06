@@ -88,6 +88,7 @@
             
             )
         } 
+        
         function App (){
             return(
                 <div id="Wrapper">
@@ -95,7 +96,9 @@
                                                         // Mỗi 1 lần 1 phần tử duyệt thì phần tử đó sẽ gọi hàm CourseItem, ko chỉ gọi lại hàm Courese mà còn gọi lại các props để lưu các course đc duyệt từ map.    
                         <CourseItem                     // gọi hàm CoureseItem để truyền các đối số là dữ liệu mà đc lấy từ Array.
                             key = {course.id}           // Coi như các key, outCourse là props của CourseItem.
-                            props = {course}        // CourseItem đang có prop đầu tiên là key = {coures.id}, props2 = object {course} được trả về từ hàm map.
+                            props = {course}            // CourseItem đang có prop đầu tiên là key = {coures.id}, props2 = object {course} được trả về từ hàm map.
+                            // *** props là truyền dữ liệu từ component cha xuống component con. 
+                            // *** props có kiểu dữ liệu nguyên thuỷ hoặc kiểu dữ liệu theo dạng tham chiếu (hàm, object, array)
                         />
                     ))}
                 </div>
