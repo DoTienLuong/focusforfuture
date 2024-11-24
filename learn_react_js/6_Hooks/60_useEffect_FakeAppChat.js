@@ -17,6 +17,13 @@ emitComment(1);
 emitComment(2);
 emitComment(3);
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
  */
 //Bước 2: Code như dưới:
 const rooms = [
