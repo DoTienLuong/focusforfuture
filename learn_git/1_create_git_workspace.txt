@@ -30,3 +30,9 @@
 
 Kiểm tra git đang link tới đâu: 
     -> git remote -v
+
+Thay đổi link git:
+    -> git remote set-url origin git://new.url.here
+
+Xoá remote git :
+    -> git remote remove origin
